@@ -11,8 +11,8 @@ const express=                require('express'),
       axios=require('axios'),
 	  bcrypt=require('bcryptjs'),
 	  qs = require('querystring');		
-//const enAddressUrl='http://admin:admin@35.200.161.167/api/positions';
-const enAddressUrl='http://admin:admin@35.200.161.167/api/devices/';
+//const enAddressUrl='http://admin:admin@35.200.152.63/api/positions';
+const enAddressUrl='http://admin:admin@35.200.152.63/api/devices/';
 
 let session = require('express-session');
 let MongoStore = require('connect-mongo')(session);
@@ -101,7 +101,7 @@ function devicestates(req,res,next){
   let result1=[];
   let livedevices=[];
   school.find({service:"GST"}).then((docs)=>{
-    axios.get("http://admin:admin@35.200.161.167/api/devices/").then((r1)=>{
+    axios.get("http://admin:admin@35.200.152.63/api/devices/").then((r1)=>{
 	_.forEach(docs,function(school){
       _.forEach(school.buses,function(bus){
 	    _.forEach(r1.data,(val)=>{
@@ -169,7 +169,7 @@ app.get('/schoolpage',(req,res)=>{
 		  result.parents.forEach((val,index)=>{
 		     cnum+=val.children.length;
 		  });
-		  let address1="http://"+result.emailAddress+":"+req.session.admin+"@35.200.161.167/api/devices/";
+		  let address1="http://"+result.emailAddress+":"+req.session.admin+"@35.200.152.63/api/devices/";
            axios.get(address1).then((response)=>{
               let allDevices=response.data;
 			  ////console.log(allDevices);
@@ -437,7 +437,7 @@ app.post('/signup',(req,res)=>{  //app signup
 			    method: 'POST',
                 headers: { 'content-type': 'application/json' },
 				data:JSON.stringify(post),
-				url:"http://admin:admin@35.200.161.167/api/users"
+				url:"http://admin:admin@35.200.152.63/api/users"
 		   }).then((result)=>{
 		      
 			  let body=_.pick(req.body,['name','username','address','password','number','email']);

@@ -64,7 +64,7 @@ let time,inter,mj,marker1,flightPath,flightPath1,mlat,mlng,maps1,mlatln,mlatln1,
 	pids=new Array();
 	
 	$.ajax({
-       url:"http://35.200.161.167/api/positions",
+       url:"http://35.200.152.63/api/positions",
 	   crossDomain: true,
 	   headers: {
           "Authorization": "Basic " + btoa("admin:admin"),
@@ -83,7 +83,7 @@ let time,inter,mj,marker1,flightPath,flightPath1,mlat,mlng,maps1,mlatln,mlatln1,
 		  $("#cid").empty();
 		  $("#cid1").empty();
 		   $.ajax({
-             url:"http://35.200.161.167/api/devices",
+             url:"http://35.200.152.63/api/devices",
 	         crossDomain: true,
 	         headers: {
                "Authorization": "Basic " + btoa("admin:admin")
@@ -138,7 +138,7 @@ let time,inter,mj,marker1,flightPath,flightPath1,mlat,mlng,maps1,mlatln,mlatln1,
     var map = $('#map');
     if(map[0]) {
 	$.ajax({
-       url:"http://35.200.161.167/api/positions",
+       url:"http://35.200.152.63/api/positions",
 	   headers: {
           "Authorization": "Basic " + btoa("admin:admin"),
 		  "Accept":"application/json"
@@ -185,7 +185,7 @@ let time,inter,mj,marker1,flightPath,flightPath1,mlat,mlng,maps1,mlatln,mlatln1,
 
 
 function seeplayback(){
-  let data="http://35.200.161.167/api/reports/route?"
+  let data="http://35.200.152.63/api/reports/route?"
   data+="deviceId="+$("#cid1").val()+"&";
   data+="from="+$("#date11").val().split("-").reverse().join("-")+"&";
   data+="to="+$("#date12").val().split("-").reverse().join("-");
@@ -365,7 +365,7 @@ function bgagain(){
 
 
 function downloadreport(){
-    let data="http://35.200.161.167/api/reports/";
+    let data="http://35.200.152.63/api/reports/";
 	data+=$("#rid").val()+"?";
 	data+="deviceId="+$("#cid").val()+"&";
 	data+="from="+$("#date").val().split("-").reverse().join("-")+"&";
@@ -448,7 +448,7 @@ $('#csvpt').change(function() {
 
 function seereport(){
   let type=$("#rid").val();
-  let data="http://35.200.161.167/api/reports/";
+  let data="http://35.200.152.63/api/reports/";
     data+=$("#rid").val()+"?";
 	data+="deviceId="+$("#cid").val()+"&";
 	data+="from="+$("#date").val().split("-").reverse().join("-")+"&";
@@ -564,7 +564,7 @@ function waitmeplz(){
 	 data["email"]=$("#z6").val();
 	 let index,data1;
 	 $.ajax({
-	   url:"http://35.200.161.167/api/users",
+	   url:"http://35.200.152.63/api/users",
 	   crossDomain: true,
 	   headers: {
           "Authorization": "Basic " + btoa("admin:admin"),
@@ -594,7 +594,7 @@ function waitmeplz(){
 
 function waitplz1(index,data){
    $.ajax({
-	   url:"http://35.200.161.167/api/users/"+index,
+	   url:"http://35.200.152.63/api/users/"+index,
 	   crossDomain: true,
 	   headers: {
           "Authorization": "Basic " + btoa("admin:admin"),
@@ -645,7 +645,7 @@ function mapagain(){
     lats=new Array();
     longs=new Array();
 	$.ajax({
-       url:"http://35.200.161.167/api/positions",
+       url:"http://35.200.152.63/api/positions",
 	   headers: {
           "Authorization": "Basic " + btoa("admin:admin"),
 		  "Accept":"application/json"
@@ -682,7 +682,7 @@ function mapfinal(){
 	pids1=new Array();
 	names1=new Array();
 	$.ajax({
-              url:"http://35.200.161.167/api/devices",
+              url:"http://35.200.152.63/api/devices",
 	          headers: {
                "Authorization": "Basic " + btoa("admin:admin"),
 			   "Accept":"application/json"
@@ -1373,7 +1373,7 @@ function addn(){
   //data["uniqueId"]="86696803013"+Math.floor(Math.random()*9999+1000).toString();
   data["uniqueId"]=$("#imei").val();
   $.ajax({
-       url:"http://35.200.161.167/api/devices",
+       url:"http://35.200.152.63/api/devices",
 	   crossDomain: true,
        type:"POST",
 	   headers:{
@@ -1447,7 +1447,7 @@ $("#confirm").modal('show');
    
    
    $.ajax({
-	   url:"http://35.200.161.167/api/devices/",
+	   url:"http://35.200.152.63/api/devices/",
 	   crossDomain: true,
 	   headers: {
           "Authorization": "Basic " + btoa(memail+":"+mname),
@@ -1467,7 +1467,7 @@ $("#confirm").modal('show');
 			  
 			  
 			  $.ajax({
-	            url:"http://35.200.161.167/api/devices/"+index,
+	            url:"http://35.200.152.63/api/devices/"+index,
 	            crossDomain: true,
 	            headers: {
                   "Authorization": "Basic " + btoa(memail+":"+mname),

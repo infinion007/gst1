@@ -98,7 +98,7 @@ let first,act,coords,unm,ids,pids,lats,longs,myLatLng,maps,marker,trafficLayer,b
 	  names1=new Array();
 	  pids1=new Array(); 
 	$.ajax({
-       url:"http://35.200.161.167/api/devices",
+       url:"http://35.200.152.63/api/devices",
 	   headers: {
           "Authorization": "Basic " + btoa("admin:admin"),
 		  "Accept":"application/json"
@@ -118,7 +118,7 @@ let first,act,coords,unm,ids,pids,lats,longs,myLatLng,maps,marker,trafficLayer,b
 		   }
         });
           $.ajax({
-            url:"http://35.200.161.167/api/positions",
+            url:"http://35.200.152.63/api/positions",
 	        headers: {
              "Authorization": "Basic " + btoa("admin:admin"),
 			 "Accept":"application/json"
@@ -176,7 +176,7 @@ let first,act,coords,unm,ids,pids,lats,longs,myLatLng,maps,marker,trafficLayer,b
 
 function seereport(){
   let type=$("#rid").val();
-  let data="http://35.200.161.167/api/reports/";
+  let data="http://35.200.152.63/api/reports/";
     data+=$("#rid").val()+"?";
 	data+="deviceId="+$("#cid").val()+"&";
 	data+="from="+$("#date").val().split("-").reverse().join("-")+"&";
@@ -293,7 +293,7 @@ function sagain(){
 }
 
 function downloadreport(){
-    let data="http://35.200.161.167/api/reports/";
+    let data="http://35.200.152.63/api/reports/";
 	data+=$("#rid").val()+"?";
 	data+="deviceId="+$("#cid").val()+"&";
 	data+="from="+$("#date").val().split("-").reverse().join("-")+"&";
@@ -362,7 +362,7 @@ function comagain(){
   pids2=new Array();
   names2=new Array();
   $.ajax({
-      url:"http://35.200.161.167/api/devices",
+      url:"http://35.200.152.63/api/devices",
 	   headers:{
           "Authorization": "Basic " + btoa("admin:admin"),
 		  "Accept":"application/json"
@@ -395,7 +395,7 @@ function mapagain(){
     lats=new Array();
     longs=new Array();
 	$.ajax({
-       url:"http://35.200.161.167/api/positions",
+       url:"http://35.200.152.63/api/positions",
 	   crossDomain: true,
 	   headers: {
           "Authorization": "Basic " + btoa("admin:admin"),
@@ -690,7 +690,7 @@ function deletedata(name,uname){
   $("#confirm").modal('show');
    document.getElementById("yescon").addEventListener("click",()=>{
 	  $.ajax({
-       url:"http://35.200.161.167/api/users",
+       url:"http://35.200.152.63/api/users",
 	   crossDomain: true,
 	   headers: {
           "Authorization": "Basic " + btoa("admin:admin"),
@@ -716,7 +716,7 @@ function deletedata(name,uname){
 
 function finallydo(index,name){
           $.ajax({
-                  url:"http://35.200.161.167/api/users/"+index,
+                  url:"http://35.200.152.63/api/users/"+index,
 	              crossDomain: true,
 	              headers: {
                     "Authorization": "Basic " + btoa("admin:admin")
@@ -784,7 +784,7 @@ function waitplz(){
 			    waitplz1(data,uname);
 			}else{
 	     	$.ajax({
-              url:"http://35.200.161.167/api/users",
+              url:"http://35.200.152.63/api/users",
 	          crossDomain: true,
 	          headers: {
                "Authorization": "Basic " + btoa("admin:admin"),
@@ -809,7 +809,7 @@ function waitplz(){
 function waitplz1(data,uname){
      let index,data1;
 	 $.ajax({
-	   url:"http://35.200.161.167/api/users",
+	   url:"http://35.200.152.63/api/users",
 	   crossDomain: true,
 	   headers: {
           "Authorization": "Basic " + btoa("admin:admin"),
@@ -838,7 +838,7 @@ function waitplz1(data,uname){
 
 function waitplz2(index,data){
   $.ajax({
-	   url:"http://35.200.161.167/api/users/"+index,
+	   url:"http://35.200.152.63/api/users/"+index,
 	   crossDomain: true,
 	   headers: {
           "Authorization": "Basic " + btoa("admin:admin"),
@@ -969,7 +969,7 @@ function deletedevice(busno,school,device){
    
    
    $.ajax({
-	   url:"http://35.200.161.167/api/devices/",
+	   url:"http://35.200.152.63/api/devices/",
 	   crossDomain: true,
 	   headers: {
           "Authorization": "Basic " + btoa("admin:admin"),
@@ -989,7 +989,7 @@ function deletedevice(busno,school,device){
 			  
 			  
 			  $.ajax({
-	            url:"http://35.200.161.167/api/devices/"+index,
+	            url:"http://35.200.152.63/api/devices/"+index,
 	            crossDomain: true,
 	            headers: {
                   "Authorization": "Basic " + btoa("admin:admin"),
@@ -1323,7 +1323,7 @@ function addn1(){
   //data["uniqueId"]="86696803013"+Math.floor(Math.random()*9999+1000).toString();
   data["uniqueId"]=$("#imei").val();
   $.ajax({
-       url:"http://35.200.161.167/api/devices",
+       url:"http://35.200.152.63/api/devices",
 	   crossDomain: true,
        type:"POST",
 	   headers: {
