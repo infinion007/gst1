@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Main admin dashboard for Girl Safety Transport">
+    <meta name="keywords" content="gst">
+
+    <!-- Title Page-->
+    <title>Admin Dashboard | GST</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/icon/prologo.png">
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+    <link href="css/index.css" rel="stylesheet" media="all">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4CTkkgRzwcS21LzhOAQti-IHrg0sXkN0"></script>
+	<script src="https://github.com/jashkenas/underscore/blob/master/underscore.js"></script>
+	
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+	<script src="js/jqueryeasing.js"></script>
+	<script src="js/markeranimate.js"></script>
+	<script src="js/slidingmarker.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.16.0/moment.min.js"></script>
+	<script src="https://rawgit.com/vitalets/combodate/master/src/combodate.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+</head>
+
+
+<body class="animsition" style="padding:0;">
+
+  <div id="cover" style="display:none;"></div>
+   <% result.forEach(function(doc){ %>
+      <p class="invisible" style="display:none;"><%=JSON.stringify(doc)%></p>
+    <% }) %>
+	  <p class="invisible1" style="display:none;"><%=JSON.stringify(schools)%></p>
+    <div class="page-wrapper">
+	    
+		
+        
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop2" id="shadow" style="position:fixed;">
+                <div class="section__content section__content--p30" style="width:100%;">
+                    <div class="container-fluid">
+                        <div class="header-wrap2">
+                            
+							
+							
+							
+							<div class="logo1" style="text-align:left; margin-right:76.5%;">   
+								<span style="color:white;font-size:22px;font-family: 'Bree Serif', serif; cursor:pointer;"><span class="js-sidebar-btn"><i  style="margin-right:20px;" class="zmdi zmdi-menu"></i></span><span id="headings" onclick="window.location.reload()">Girl Safety Transport</span></span>
+								 
+                            </div>
+							
+							<div class="logo d-block d-lg-none">
+                               <span style="color:white;font-size:22px;font-family: 'Bree Serif', serif; cursor:pointer;"><span class="js-sidebar-btn"><i  style="margin-right:20px;" class="zmdi zmdi-menu"></i></span><span id="headings" onclick="window.location.reload()">Girl Safety Transport</span></span>
+                            </div>
+							
+	                   
+					   
+					   
+						
+			<div class="setting-menu js-right-sidebar " id="shadow" style="overflow-y:scroll;">
+                <nav class="navbar-sidebar2">
+                    <ul class="list-unstyled navbar__list">
+                        
+						<li class="has-sub" id="bar0">
+                            <a class="js-arrow">
+                                <i class="fas fa-building"></i><span onclick="show(0)" role="button">&nbsp;Home
+                                </span></a>
+                        </li>
+						
+						<li class="has-sub" id="bar1">
+                            <a class="js-arrow">
+                                <i class="fas fa-institution"></i><span onclick="show(1)" role="button">Schools
+                                </span></a>
+                        </li>
+
+                        <li class="has-sub" id="bar2">
+                            <a class="js-arrow">
+                                <i class="fas fa-bus"></i><span onclick="show(2)" role="button">Vehicles</span>
+                            </a>
+                        </li>
+                        
+						<li class="has-sub" id="bar3">
+                            <a class="js-arrow">
+                                <i class="fa fa-user"></i><span onclick="show(3)" role="button">Parents
+                             </span>
+                            </a>
+                        </li>
+						
+						<li class="has-sub" id="bar4">
+                            <a class="js-arrow">
+                                <i class="fa fa-child"></i><span onclick="show(4)" role="button">&nbsp;Children
+                             </span>
+                            </a>
+                        </li>
+						
+						<li class="has-sub" id="bar5">
+                            <a class="js-arrow">
+                                <i class="fa fa-file"></i><span onclick="show(5)" role="button">&nbsp;Reports
+                             </span>
+                            </a>
+                        </li>
+						
+						<li class="has-sub" id="bar6">
+                            <a class="js-arrow">
+                                <i class="fa fa-mobile"></i><span onclick="show(6)" role="button">&nbsp;Devices
+                             </span>
+                            </a>
+                        </li>
+						
+						<li class="has-sub" id="bar7">
+                            <a class="js-arrow">
+                                <i class="fa fa-map-marker"></i><span onclick="show(7)" role="button">Live Tracking
+                             </span>
+                            </a>
+                        </li>
+						
+						<li class="has-sub" id="bar8">
+                            <a class="js-arrow">
+                                <i class="fa fa-comments"></i><span onclick="show(8)" role="button">Feedbacks
+                             </span>
+                            </a>
+                        </li>
+						
+						<li class="has-sub" id="bar9">
+                            <a class="js-arrow">
+                                <i class="fas fa-rupee-sign"></i><span onclick="show(9)" role="button">&nbsp;&nbsp;Billings
+                             </span>
+                            </a>
+                        </li>
+						
+						<li class="has-sub" id="bar10">
+                            <a class="js-arrow">
+                                <i class="fas fa-cog"></i><span onclick="show(10)" role="button">&nbsp;Settings
+                             </span>
+                            </a>
+                        </li>
+						
+						<li class="has-sub" id="bar11">
+                            <a class="js-arrow">
+                                <i class="fa fa-fighter-jet"></i><span onclick="show(11)" role="button">Sign Out
+                             </span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+              </div>
+							
+							
+								
+                            <div class="header-button2">
+							    <!--div>
+							       <input type="text" style="color:white; margin-top:15%;"/>
+								   <i class="fa fa-search" style="margin-right:50%;"></i>
+                                </div-->
+								<div class="header-button-item has-noti js-item-menu">
+                                    <i class="zmdi zmdi-notifications" style="margin-right:10px;"></i>
+                                    <div class="notifi-dropdown js-dropdown" style="overflow-y:scroll; margin-right:20px;">
+                                        <!--div class="notifi__item">
+                                            <div class="bg-c1 img-cir img-40">
+                                                <i class="zmdi zmdi-email-open"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p>You got a email notification</p>
+                                                <span class="date">April 12, 2018 06:50</span>
+                                            </div>
+                                        </div-->
+										
+                                    </div>
+                                </div>
+                            </div>
+                        
+						
+						
+						</div>
+                    </div>
+                </div>
+            </header>
+
+
+
+            <section class="statistic" style="margin-top:40px;">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3">
+                                <div id="card-1" class="statistic__item card-1" onclick="show(1)">
+                                    <h2 class="number" style="color:white;"><%=schoolno %></h2>
+                                    <span class="desc" style="color:white;">Schools</span>
+                                    <div class="icon">
+                                        <i class="fas fa-building"></i>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item card-1" id="card-2" onclick="show(2)">
+                                    <h2 class="number" style="color:white;"><%=buses%></h2>
+                                    <span class="desc" style="color:white;">Vehicles</span>
+                                    <div class="icon">
+                                        <i class="fa fa-bus"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item card-1" id="card-3" onclick="show(3)">
+                                    <h2 class="number" style="color:white;"><%=parents %></h2>
+                                    <span class="desc" style="color:white;">Parents</span>
+                                    <div class="icon">
+                                        <i class="fa fa-user"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <div class="statistic__item card-1" id="card-4" onclick="show(4)">
+                                    <h2 class="number" style="color:white;"><%=children%></h2>
+                                    <span class="desc" style="color:white;">Children</span>
+                                    <div class="icon">
+                                        <i class="fa fa-users"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						
+						
+						<div class="row">
+						   <div class="col-md-6 col-lg-3">
+                                <div id="card-5" class="statistic__item card-5" onclick="show(7)">
+                                    <span class="desc" style="color:white; margin-top:20px;">Live Tracking</span>
+                                   
+                                </div>
+                            </div>
+						
+						
+						   <div class="col-md-6 col-lg-3">
+                                <div id="card-6" class="statistic__item card-5" onclick="show(6)">
+                                    <span class="desc" style="color:white; margin-top:20px;">Devices</span>
+                                   
+                                </div>
+                            </div>
+							
+							<div class="col-md-6 col-lg-3">
+                                <div id="card-7" class="statistic__item card-5" onclick="show(8)">
+                                    <span class="desc" style="color:white; margin-top:20px;">Feedback</span>
+                                   
+                                </div>
+                            </div>
+							
+							<div class="col-md-6 col-lg-3">
+                                <div id="card-8" class="statistic__item card-5" onclick="show(9)">
+                                    <span class="desc" style="color:white; margin-top:20px;">Billing</span>
+                                   
+                                </div>
+                            </div>
+							
+						</div>
+						
+						
+                    </div>
+                </div>
+            </section>
+            <!-- END STATISTIC-->
+
+
+            <section>
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-12">
+                               
+                                <div class="user-data m-b-40" id="shadow">
+                                    <h3 class="title-3 m-b-30">
+                                        <i class="zmdi zmdi-map"></i>Mean Data</h3>
+
+                                    <div class="table-responsive table-data" style="height:525px;">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+
+                                                    <td>School</td>
+                                                    <td>Vehicle</td>
+                                                    <td>Children</td>
+                                                    <td>Parents</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="mtable">
+											  <%if(schools.length==0){%>
+											     <tr ><td colspan="4" style="padding-top:150px; padding-bottom:150px; border-style:hidden;" class="text-center">No any mean data found</td></tr>
+											  <%}else{%>
+                                              <%schools.forEach(function(school){%>
+											   
+                                                <tr>
+
+                                                    <td>
+                                                        <div class="table-data__info">
+                                                            <h6><%=school.name%></h6>
+                                                            <span>
+                                                                <a href="#" onclick="return false;"><%=school.address%></a>
+                                                            </span>
+                                                            <br />
+                                                            <span>
+                                                                <a href="#" onclick="return false;"><%=school.contactNumber%></a>
+                                                            </span>
+                                                            <br />
+                                                            <span>
+                                                                <a href="#" onclick="return false;"><%=school.emailAddress%></a>
+                                                            </span>
+                                                        </div>
+                                                    </td>
+                                                    <td>
+                                                        <span class=""><%=school.buses.length%></span>
+                                                    </td>
+
+                                                    <td>
+                                                        <span class="">
+                                                            <%=school.childrenNumber%>
+                                                        </span>
+                                                    </td>
+                                                    <td><span><%=school.parents.length%></span></td>
+                                                </tr>
+
+                                            <%  })  %>
+                                            <%}%>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+							<div class="col-xl-12">
+                                <div class="map-data m-b-40" style="height:950px;" id="shadow ">
+                                    <h3 class="title-3 m-b-30">
+                                        <i class="zmdi zmdi-map"></i>Live Tracking</h3>
+                                    <div class="filters">
+                                        
+										<label>School Name</label>
+										<div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border" style="width:100%;">
+                                            <select class="js-select2 schooln" name="property">
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+										
+										<label style="margin-top:30px;">Vehicle Number</label>
+                                        <div class="rs-select2--dark rs-select2--sm rs-select2--border" style="width:100%;">
+                                            <select class="js-select2 au-select-dark busn" name="time">
+                                            </select>
+                                            <div class="dropDownSelect2"></div>
+                                        </div>
+                                    
+									</div>
+									 
+									  <div id="maptext" style="margin-top:30px;"></div>
+									 
+                                    <div class="map-wrap m-t-45 m-b-80">
+                                        <div id="map" style="height: 470px; width:100%;" class="text-center"></div>
+                                    </div>
+                                     
+                                </div>
+                            </div>
+							
+						<div class="col-xl-12">
+						   <div class="school-data m-b-40" style="background-color:#FFFFFF; padding-bottom:30px;" id="shadow">
+						     
+						     <h3 class="title-3 m-b-30" style="padding-top:30px;">
+							         
+										     <i class="zmdi zmdi-map sdd" style="padding-left:40px;" ></i>School Data
+										
+										    <span style="float:right" class="adds">
+											  <button onclick="newschool()" class="btn btn-primary" id="but_add" style="margin-right:30px;">Add New School</button>
+											 </span>
+											<span style="float:right" class="adds1">
+											  <button onclick="csvschool()" class="btn btn-danger" id="csvs_add" style="margin-right:30px;">Import CSV</button>
+											  
+											  
+											     <input type="file" id="csvsch" accept=".csv" style="display:none;">
+											  
+											
+											</span>
+							     
+							 </h3>
+                              <div class="table-responsive table-data" style="height:525px;">
+								<table class="table" style="border-style:hidden;">
+                                    <thead style="background-color:#FFFFFF;" >
+                                        <tr>
+                                            <td style="padding-left:30px;">Name</td>
+                                            <td>Username</td>
+                                            <td>Password</td>
+                                            <td>Address</td>
+											<td>Email</td>
+											<td>Phone Number</td>
+                                            <td>Number of vehicles</td>
+											<td>Number of parents</td>
+											<td>Number of children</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableOverflow">
+									 <%if(schools.length==0){%>
+											     <tr ><td colspan="9" style="padding-top:150px; padding-bottom:150px; border-style:hidden;" class="text-center">No any school data found</td></tr>
+									<%}else{%>
+                                     <% let jj=0; schools.forEach(function(school,index){%>
+									    <tr style="border-style:hidden; background-color:#FFFFFF;" class="mn">
+											<td style="padding-left:30px;"><%=school.name%></td>
+                                            <td><%=school.username%></td>
+                                            <td>-</td>
+                                            <td><%=school.address%></td>
+											<td style="width:20px;"><%=school.emailAddress%></td>
+											<td><%=school.contactNumber%></td>
+											<td><%=school.buses.length%></td>
+											<td><%=school.parents.length%></td>
+									        <%school.parents.forEach((val)=>{%>
+											   <%jj+=val.children.length;%>
+											<%})%>
+											<td><%=jj%></td>
+											<td><i class="far fa-edit" onclick="editdata('<%=school.name%>','<%=school.username%>','<%=school.address%>','<%=school.emailAddress%>','<%=school.contactNumber%>')"></i></td>
+											<td><i class="fa fa-trash" onclick="deletedata('<%=school.name%>','<%=school.username%>')"></i></td>
+                                        </tr>
+									 <%})%>
+									<%}%>
+                                    </tbody>
+                                </table>
+								</div>
+								</div>
+							</div>
+							
+							<p id="schoos" style="display:none;"><%=JSON.stringify(schools)%></p>
+							
+							<div class="col-xl-12">
+							   <div class="parent-data m-b-40" style="background-color:#FFFFFF; padding-bottom:30px;" id="shadow">
+							    <h3 class="title-3 m-b-30" style="padding-top:30px;">
+                                        <i class="zmdi zmdi-map ppd" style="padding-left:40px;" ></i>Parent Data
+										<span style="float:right" class="pdds" ><button onclick="newparent()" class="btn btn-primary pull-right" id="but_add" style="margin-right:30px;">Add New Parent</button></span>
+                                        <span style="float:right" class="pdds1" ><button onclick="csvparent()" class="btn btn-danger pull-right" id="csvp_add" style="margin-right:30px;">Import CSV</button></span>										
+							         
+									 <input type="file" id="csvpt" accept=".csv" style="display:none;">
+									 
+								</h3>
+								
+								<div class="table-responsive table-data" style="height:525px;">
+                                <table class="table" style="border-style:hidden;">
+                                    <thead id="taHead" style="background-color:#FFFFFF;">
+                                        <tr>
+                                            <td style="padding-left:30px;">Name</td>
+                                            <td>School Name</td>
+                                            <td>Child Name</td>
+											<td>Morning Vehicle Number</td>
+											<td>Evening Vehicle Number</td>
+                                            <td>Contact Number</td>
+                                            <td>Email</td>
+                                            <td>Address</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tableOverflow" style="background-color:#FFFFFF; border-style:hidden;">
+									   
+                                        <%if(schools.length==0){%>
+											     <tr><td colspan="8" style="padding-top:150px; padding-bottom:150px; border-style:hidden;" class="text-center">No any parents data found</td></tr>
+									     <%}else{%>
+										 
+                                           <tr id="nops"><td colspan="8" style="padding-top:150px; padding-bottom:150px; border-style:hidden;" class="text-center">No any parents data found</td></tr>
+                                         									  
+										 <%schools.forEach(function(school,index){%>
+											  
+											     <%for(var i=0;i<school.parents.length;i++){%>
+												 <tr class="mn" id="nopi">
+												    <td style="padding-left:30px;"><%=school.parents[i].parentName%></td>
+													<td><%=school.name%></td>
+													    
+														<td>
+														<%for (var j=0;j<school.parents[i].children.length;j++){%>
+													         <%=school.parents[i].children[j].childName%><br/>
+													    <%}%>
+														</td>
+													   
+													   <td>
+													  
+													  <%for (var j=0;j<school.parents[i].children.length;j++){%>
+													  <%if(school.parents[i].children[j].busNumber=="0" || school.parents[i].children[j].busNumber==0 || school.parents[i].children[j].busNumber.length==0 ){%>
+													    Unassigned<br/>
+													  <%}else{%>
+													    
+														  <%=school.parents[i].children[j].busNumber%><br/>
+														
+													  <%}%>
+													  <%}%>
+													  
+													  </td>
+													  
+													  <td>
+													  
+													  <%for (var j=0;j<school.parents[i].children.length;j++){%>
+													  <%if(school.parents[i].children[j].busNumber1=="0" || school.parents[i].children[j].busNumber1==0 || school.parents[i].children[j].busNumber1.length==0 ){%>
+													    Unassigned<br/>
+													  <%}else{%>
+													    
+														  <%=school.parents[i].children[j].busNumber1%><br/>
+														
+													  <%}%>
+													  <%}%>
+													  
+													  </td>
+													  
+													<td id="pnumb<%=i%>"><%=school.parents[i].mobileNumber%></td>
+													<td><%=school.parents[i].emailAddress%></td>
+													<td><%=school.parents[i].address%></td>
+												 <td><i class="far fa-edit" onclick="peditdata('<%=school.parents[i].parentName%>','<%=school.name%>','<%=JSON.stringify(school.parents[i].children)%>','<%=school.parents[i].mobileNumber%>','<%=school.parents[i].emailAddress%>','<%=school.parents[i].address%>')"></i></td>
+											     <td><i class="fa fa-trash" onclick="pdeletedata('<%=school.parents[i].mobileNumber%>','<%=school.name%>')"></i></td>
+											     </tr>
+											   <%}%>
+                          
+										<%})%>
+										
+                                       <%}%>            
+                                    </tbody>
+                                </table>
+								</div>
+							   </div>
+                            </div>
+							
+							<div class="col-xl-12">
+							   <div class="device-data m-b-40" style="background-color:#FFFFFF; padding-bottom:30px;" id="shadow">
+							    <h3 class="title-3 m-b-30" style="padding-top:30px;">
+                                        <i class="zmdi zmdi-map" style="padding-left:40px;" ></i>Devices Data
+										<span style="float:right" class="mp" ><button class="btn btn-danger pull-right" onclick="sadd()" id="dev_add" style="margin-right:30px;">Add Device</button></span>
+										<span style="float:right" class="mp1"><button class="btn btn-primary pull-right" onclick="newassign()" id="but_add" style="margin-right:30px;">Assign Device</button></span>
+							    </h3>
+						    <div class="table-responsive table-data" style="height:525px;">
+							<table class="table " style="border-style:hidden;">
+                                   <thead id="taHead" style="background-color:#FFFFFF;">
+                                          <tr>
+                                              <td style="padding-left:50px;">Device Name</td>
+                                               <td>Name of School</td>
+                                               <td>Vehicle Number</td>
+                                          </tr>
+                                    </thead>
+                                          <tbody >
+										   
+											 
+                                             <%result.forEach(function(doc,index){ %>
+                                                    													
+                                                  <%if(doc.deviceName!=0){%>													
+													   <tr style="background-color:#FFFFFF; border-style:hidden;" class="mn">
+                                                       
+                                                           <td style="padding-left:50px;">
+															   <%= doc.deviceName%>
+															  </td>
+															
+														  
+														  <%if(doc.name==null){%>
+														     <td>Unassigned</td>
+														  <%}else{%>
+														    
+                                                             <td><%= doc.name %></td>
+															
+														  <%}%>
+														  
+														  <%if(doc.busno.length==0 || doc.busno=="0" || doc.busno==0){%>
+														     <td>Unassigned</td>
+														  <%}else{%>
+														    
+                                                              <td><%= doc.busno%></td>
+															
+                                                          <%}%>
+													
+														    <td><i class="far fa-edit" onclick="assigndata('<%=doc.busno%>','<%=doc.name%>','<%=doc.deviceName%>')"></i></td>
+                                                            <td><i class="fa fa-trash" onclick="deletedevice('<%=doc.busno%>','<%=doc.name%>','<%=doc.deviceName%>')"></i></td>
+														  
+														  
+														</tr>
+													<%}%>
+                                             <% }) %>
+											 
+											 
+                                          </tbody>
+                                 </table>
+								</div>
+							
+                        </div>
+                    </div>
+					
+					
+					<div class="col-xl-12">
+							   <div class="bus-data m-b-40" style="background-color:#FFFFFF; padding-bottom:30px;" id="shadow">
+							    <h3 class="title-3 m-b-30" style="padding-top:30px;">
+                                        <i class="zmdi zmdi-map bbd" style="padding-left:40px;" ></i>bus Data
+										<span style="float:right" class="bdds"><button class="btn btn-primary pull-right" onclick="busadd()" id="bus_add" style="margin-right:30px;">Add New Vehicle</button></span>
+							    </h3>
+						    <div class="table-responsive table-data" style="height:525px;">
+							<table class="table " style="border-style:hidden;">
+                                   <thead id="taHead" style="background-color:#FFFFFF;">
+                                          <tr>
+                                               <td style="padding-left:50px;">Vehicle Number</td>
+                                               <td>School Name</td>
+                                          </tr>
+                                    </thead>
+                                          <tbody>
+										  <%let mfg=false;if(result.length==0){%>
+										       <td colspan="2" style="padding-top:150px; padding-bottom:150px; border-style:hidden;" class="text-center">No any bus data found</td>
+										  <%}else{%>
+										   
+                                                  <%for(let i=0;i<result.length;i++){%>
+														  
+														  <%if(result[i].busno.length!=0 && result[i].busno!="0" && result[i].busno!=0){ mfg=true;%>
+                                                            <tr style="background-color:#FFFFFF; border-style:hidden;" class="mn">
+															<td style="padding-left:50px;"><%= result[i].busno%></td>
+                                                            <td><%=result[i].name%></td>
+														  
+														  <td><i class="fa fa-edit" onclick="editbus('<%=result[i].busno%>','<%=result[i].name%>')"></i></td>
+                                                          <td><i class="fa fa-trash" onclick="deletebus('<%=result[i].busno%>','<%=result[i].name%>')"></i></td>
+														  </tr>
+														  <%}%>
+												   <%}%>
+												   <%if(mfg==false){%>
+												       <td colspan="2" style="padding-top:150px; padding-bottom:150px; border-style:hidden;" class="text-center">No any bus data found</td>
+										           <%}%>		   
+                  
+										     <%}%>
+                                             
+                                          </tbody>
+                                 </table>
+								</div>
+							
+                        </div>
+                    </div>
+					
+					
+					<div class="col-xl-12">
+							   <div class="child-data m-b-40" style="background-color:#FFFFFF; padding-bottom:30px;" id="shadow">
+							    <h3 class="title-3 m-b-30" style="padding-top:30px;">
+                                        <i class="zmdi zmdi-map cdd" style="padding-left:40px;" ></i>Children Data
+										<span style="float:right" class="cdds" ><button class="btn btn-primary pull-right" onclick="childadd()" id="chil_add" style="margin-right:30px;">Add New Children</button></span>
+							    </h3>
+						    <div class="table-responsive table-data" style="height:525px;">
+							<table class="table " style="border-style:hidden;">
+                                   <thead id="taHead" style="background-color:#FFFFFF;">
+                                          <tr>
+                                               <td style="padding-left:50px;">Child Name</td>
+											   <td>Parent Name</td>
+											   <td>School Name</td>
+                                          </tr>
+                                    </thead>
+                                          <tbody>
+										   <%if(schools.length==0){%>
+											     <tr><td colspan="3" style="padding-top:150px; padding-bottom:150px; border-style:hidden;" class="text-center">No any children data found</td></tr>
+									     <%}else{%>
+										 
+                                             
+											     
+												 <%for(var x=0;x<schools.length;x++){%>
+												 
+												 <%if(schools[x].parents.length==0){%>
+												    <tr><td colspan="3" style="padding-top:150px; padding-bottom:150px; border-style:hidden;" class="text-center">No any children data found</td></tr>
+												 <%break;}else{%>
+											     <%for(var i=0;i<schools[x].parents.length;i++){%>
+		                                            
+													
+													<%for (var j=0;j<schools[x].parents[i].children.length;j++){%>
+														<%for(var k=0;k<schools[x].parents[i].children[j].childName.split(",").length;k++){%>
+														  <tr class="mn" id="nopi">
+														  <td style="padding-left:50px;"><%=schools[x].parents[i].children[j].childName.split(",")[k]%></td>
+														  <td><%=schools[x].parents[i].parentName%></td>
+													      <td><%=schools[x].name%></td>
+													      <td><i class="far fa-edit" onclick="ceditdata('<%=schools[x].parents[i].children[j].childName.split(",")[k]%>','<%=schools[x].parents[i].parentName%>','<%=schools[x].name%>')"></i></td>
+											              <td><i class="fa fa-trash" onclick="cdeletedata('<%=schools[x].parents[i].children[j].childName.split(",")[k]%>','<%=schools[x].parents[i].parentName%>','<%=schools[x].name%>')"></i></td>
+														  </tr>
+														<%}%>
+													  <%}%>
+											      
+												 <%}%>
+												<%}%>
+											   
+										<%}%>
+										<%}%> 
+											 
+                                          </tbody>
+                                 </table>
+								</div>
+							
+                        </div>
+                    </div>
+					
+                  
+				  <div class="col-xl-12">
+                                <div class="feedback-data m-b-40" style="background-color:#FFFFFF; padding-bottom:30px;" id="shadow">
+                                    <h3 class="title-3 m-b-30" style="padding-top:30px;">
+                                        <i class="zmdi zmdi-map" style="padding-left:40px;"></i>Feedbacks
+								 </h3>
+                                  
+								    <!--main data-->
+									<div class="table-responsive table-data" style="height:525px;">
+							          <table class="table" style="border-style:hidden;">
+                                        <thead id="taHead" style="background-color:#FFFFFF;">
+                                          <tr>
+                                               <td style="padding-left:50px;">Feedback</td>
+											   <td>Parent Name</td>
+											   <td>Contact Number</td>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="feedb" style="border-style:hidden;">
+										</tbody>
+										</table>
+								  </div>
+								
+				       </div>
+				  </div>
+				  
+				  <div class="col-xl-12">
+                                <div class="billing-data m-b-40" style="background-color:#FFFFFF; padding-bottom:30px;" id="shadow">
+                                    <h3 class="title-3 m-b-30" style="padding-top:30px;">
+                                        <i class="zmdi zmdi-map" style="padding-left:40px;"></i>Billing Datas</h3>
+                                  <div>
+								    
+									<!--main data-->
+									<div class="table-responsive table-data" style="height:525px;">
+							          <table class="table" style="border-style:hidden;">
+                                        <thead id="taHead" style="background-color:#FFFFFF;">
+                                          <tr>
+                                               <td style="padding-left:50px;">Parent Name</td>
+											   <td>Mobile Number</td>
+											   <td>Amount Paid</td>
+                                          </tr>
+                                        </thead>
+                                        <tbody class="payb" style="border-style:hidden;">
+										</tbody>
+										</table>
+								  </div>
+									
+								  </div>
+								</div>
+				  </div>
+					
+  
+					
+					<div class="col-xl-12">
+                                <div class="report-data m-b-40" id="shadow addy">
+                                    <h3 class="title-3 t1 m-b-30">
+                                        <i class="zmdi zmdi-map"></i>Download Report</h3>
+                                    
+									<div class="results" style="display:none;">
+									   <div class="table-responsive table-data" style="height:525px;">
+							               <table class="table" style="border-style:hidden;">
+                                              <thead class="tahead" style="background-color:#FFFFFF;">
+											    <tr class="resulth">
+												</tr>
+											  </thead>
+											  <tbody class="resultd">
+											  </tbody>
+										   </table>
+										</div>
+									</div>
+									
+									<div class="selectors">
+                                        
+										<label style="margin-top:20px;">Choose Starting Date&nbsp;</label>
+											<input type="text" id="date" data-format="DD-MM-YYYY" data-template="D MMM YYYY" name="date" value="01-01-2018"><br/>
+                                        
+										
+										<label style="margin-top:30px;">Choose Ending Date&nbsp;&nbsp;&nbsp;</label>
+                                             <input type="text" id="date1" data-format="DD-MM-YYYY" data-template="D MMM YYYY" name="date"><br/>
+                                         
+										 <label style="margin-top:30px;">Choose Device Name&nbsp;&nbsp;</label>
+										 <select name="cdeviceid" id="cid" style="margin-top:15px;">
+									  
+									  
+									     </select>
+										 <br/>
+										 <label style="margin-top:30px;">Choose Report Type&nbsp;&nbsp;&nbsp;&nbsp;</label>
+										 <select name="rid" id="rid" style="margin-top:15px;">
+                                             <option value="route">Route</option>
+											 <option value="events">Events</option>
+                                             <option value="trips">Trips</option>
+											 <option value="stops">Stops</option>
+											 <option value="summary">Summary</option>
+									     </select>
+
+										 
+										 
+									   <script>
+										  $('#date').combodate({
+                                              minYear: 2018,
+                                              maxYear: new Date().getFullYear(),
+                                           });  
+										  $('#date1').combodate({
+                                              minYear: 2018,
+                                              maxYear: new Date().getFullYear(),
+                                           });
+										   $('#date1').combodate('setValue', new Date());
+									   </script>
+									   <p id="erru" style="margin-top:30px; display:none;"> Unable to download the report. May be no any devices found or the selected device is not active. Please try again later</p>
+									 <p id="erru1" style="margin-top:30px; display:none;">The device data under the specified date range and type seems to be empty.</p>
+									 <br/>
+									 <span class="seed" ><button onclick="seereport()" class="btn btn-info" id="s_get" style="margin-top:20px;">View Report</button></span>
+									 <span class="getd"><button onclick="downloadreport()" class="btn btn-primary" id="r_get" style="margin-top:20px;">Download Report</button></span>
+		
+									</div>
+                                    
+
+                                </div>
+                                
+                       </div>
+							
+					</div>
+                
+				</div>
+            </section>
+            
+            
+			
+			
+			<div class="modal fade" id="addit">
+                <div class="modal-dialog modal-lg" style="height:450px;" id="f10">
+                    <div class="modal-content" id="shadow">
+                        <div class="modal-header"><span style="font-size:18px;" id="headis">Add New Device</span></div>
+                        <div class="modal-body text-center" id="overflowControl">
+                            
+                            <div class="row" id="addDevice">
+                                <form role="form" id="deform">
+                                    
+									<input type="text" style="width:95%; margin-left:10px; margin-bottom:10px;" name="name"  class="form-control" id="d1" placeholder="Enter Device Name" />
+                                    <input type="text" style="width:95%; margin-left:10px; margin-bottom:10px;"  class="form-control" id="imei" placeholder="Enter IMEI number" />								
+                     					<input type="hidden" name="from" value="admin"/>
+									
+									<p id="yahoo" style=" display:none; margin-top:10px; margin-bottom:10px;"></p>
+									
+									<button type="button" onclick="addn1()" class="btn btn-outline-primary btn-lg" value="submit" id="addde">Add</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button class="btn btn-outline-danger" data-dismiss="modal">Close</button></div>
+                    </div>
+                </div>
+            </div>
+			
+			
+			<div class="modal fade" id="childit">
+                <div class="modal-dialog modal-lg" style="height:450px;" id="f12">
+                    <div class="modal-content" id="shadow">
+                        <div class="modal-header"><span style="font-size:18px;" id="headisi"></span></div>
+                        <div class="modal-body text-center" id="overflowControl">
+                            
+                            <div class="row" id="cheadd">
+                                <form role="form" method="post" id="cheform">
+                                    <!--input type="text" style="width:95%; margin-left:10px; margin-bottom:10px;" name="name"  class="form-control" id="d1" placeholder="Enter Child Name" /-->
+                                    
+									<select name="schoolName" onChange="showother(this)" id="s2c" style="width:95%; margin-left:15px; margin-top:15px;" class="form-control" required>
+									  
+									  <%if(schools.length!=0){%>
+									     <option value="" selected>Choose School Here</option>
+									  <%}else{%>
+									      <option value="" selected>No school found to add bus</option>
+									  <%}%>
+									  <%schools.forEach(function(school,index){%>
+									    <option value="<%=school.name%>"><%=school.name%></option>
+									  <%})%>
+									</select>
+									
+									<select name="parentName" id="pd2c" style="width:95%; display:none; margin-left:15px; margin-top:20px;" class="form-control" required>
+									</select>
+									
+									
+                                     
+									
+									<span id="ttok" style="display:none;">
+									  <input type="text" id="ch21" name="childName" style="width:90%; float:left; margin-left:15px; margin-bottom:10px; margin-top:20px;" class="form-control" placeholder="Enter Child Name" required/>
+									  <i class="fas fa-plus" style="float:right; margin-top:-30px; width:10%;" id="i21" onclick="fexpandok()"></i>
+									</span>
+									<!--input type="hidden" name="busNumber" value="0"/-->
+									
+									
+									<button style="margin-top:10px;" type="submit" class="btn btn-outline-primary btn-lg" value="submit" id="cheadd">Done</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button class="btn btn-outline-danger" data-dismiss="modal">Close</button></div>
+                    </div>
+                </div>
+            </div>
+			
+			<div class="modal fade" id="busit">
+                <div class="modal-dialog modal-lg" style="height:450px;" id="f10">
+                    <div class="modal-content" id="shadow">
+                        <div class="modal-header"><span style="font-size:18px;" id="headil">Add New Vehicle</span></div>
+                        <div class="modal-body text-center" id="overflowControl">
+                            
+                            <div class="row" id="addBus">
+                                <form role="form" method="POST" id="beform" class="text-center">
+                                    <input type="text" style="width:92%; margin-left:15px; margin-bottom:10px;" name="busnumber"  class="form-control" id="bd1" placeholder="Enter Vehicle Number" />
+                                    
+									<select name="schoolname" id="sd1" style="width:92%; margin-left:15px; margin-top:15px;" class="form-control" required>
+									  
+									  <%if(schools.length!=0){%>
+									     <option value="" selected>Choose School Here</option>
+									  <%}else{%>
+									      <option value="" selected>No school found to add bus</option>
+									  <%}%>
+									  <%schools.forEach(function(school,index){%>
+									    <option value="<%=school.name%>"><%=school.name%></option>
+									  <%})%>
+									</select>
+									
+									<input type="hidden" name="deviceName" value="0"/>
+									
+									<input type="hidden" name="from" value="admin"/>
+									
+									<p id="busya" style="margin-top:10px; display:none;">A vehicle under this number is already found registered</p>
+									<button type="submit" onclick="addn()" style="margin-top:10px;" class="btn btn-outline-primary btn-lg" value="submit" id="addde1">Add</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button class="btn btn-outline-danger" data-dismiss="modal">Close</button></div>
+                    </div>
+                </div>
+            </div>
+			
+			
+			
+			
+			<div class="modal fade" id="editSchool">
+                <div class="modal-dialog modal-lg" style="height:450px;" id="f1">
+                    <div class="modal-content" id="shadow">
+                        <div class="modal-header"><span style="font-size:18px;" id="headis">Add New School</span></div>
+                        <div class="modal-body text-center" id="overflowControl">
+                            
+                            <div class="row" id="addSchool">
+                                <form role="form text-center" method='POST' id="sform">
+                                    <input type="text" name="name"  class="form-control" id="z1" placeholder="Enter School Name"  required/>
+                                    <input type="text" name="username" class="form-control" id="z2" placeholder="Enter School Username"  required/>
+                                    <input type="password" name="password" class="form-control" id="z3"  style="margin-top:10px;" placeholder="Enter School Password" required/>
+                                    <input type="number" name="number" class="form-control" id="z4"  style="margin-top:20px;" placeholder="Enter School Contact Number" required/>
+                                    <input type="text" name="address" class="form-control" style="margin-top:20px;" id="z5"  placeholder="Enter School Address" required/>
+                                    <input type="email" name="email" class="form-control" id="z6"  placeholder="Enter School Email Address" required/>
+									<p id="errlu" style="display:none; margin-top:10px; margin-bottom:10px;">Entry with similar fields seems to already exist. Please try again with proper checking.</p>
+									<button type="submit" onclick="waitplz()" class="btn btn-outline-primary btn-lg" value="submit" id="adds">Add</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button class="btn btn-outline-danger" data-dismiss="modal">Close</button></div>
+                    </div>
+                </div>
+            </div>
+            
+			           <div class="modal fade" id="devicestates">
+                                <div class="modal-dialog modal-lg">
+								<div class="modal-content" id="shadow">
+                                  <div class="modal-header"><span style="font-size:18px;">Assign Device</span></div>
+                                   <div class="modal-body text-center" id="overflowControl">
+                                   <form role="form text-center" action='/busNumberWithDevice' method='POST' id="dform">
+                                    <!--input type="number" id="did" name="deviceid" style="margin-top:20px;" class="form-control" placeholder="Enter deviceID here"/-->
+                                    <select name="deviceName" id="did" style="width:100%; margin-top:15px;" class="form-control" required>
+									  
+									  
+									  <%let m,n; for(let i=0;i<result.length;i++){%>
+									      <%if(result[i].busno.length==0 || result[i].busno=="0" || result[i].busno==0){ m=true;%>
+			
+									         <option value="<%=result[i].deviceName%>"><%=result[i].deviceName%></option>
+											
+										  <%}else{ m=false;%>
+										  <%}%>
+									  <%}%>
+									  
+									  <%if(m==false){%>
+									     <option selected value="" id="ullu">Sorry no empty devices found for assigning</option>
+									  <%}else{%>
+									     <option id="el" value="" selected>Choose Device Name</option>
+									  <%}%>
+									 </select>
+									<!--input type="text" id="sid" name="schoolname" style="margin-top:20px;" class="form-control" placeholder="Enter School name"/-->
+									
+									<select name="schoolname" id="sid" style="width:100%; margin-top:15px;" class="form-control" required>
+									  
+									  <%if(schools.length!=0){%>
+									     <option value="" selected>Choose School Here</option>
+									  <%}else{ n=false;%>
+									      <option value="" selected>No school found to assign devices</option>
+									  <%}%>
+									  <%schools.forEach(function(school,index){%>
+									    <option value="<%=school.name%>"><%=school.name%></option>
+									  <%})%>
+									</select>
+                                    
+									<input type="text" id="bid" name="busnumber" style="margin-top:20px;" class="form-control" placeholder="Enter Vehicle Number" required/>
+                                    
+									<input type="hidden" name="from" value="admin"/>
+									
+									<p id="isu" style="margin-top:30px; display:none;"></p>
+									<button type="button" onclick="unassign()" id="amm" style="margin-top:20px; float:left;" class="btn btn-outline-info btn-lg">Unassign</button>
+									<button type="submit" onclick="checksame()" id="am" style="margin-top:20px;" class="btn btn-outline-primary btn-lg" value="submit">Assign</button>
+             
+									<%if(m==false || n==false){%>
+									  <script>
+									      if(document.getElementById("el")!=null){
+										    document.getElementById("el").style.display="none";
+											}
+											document.getElementById("am").disabled=true;
+									  </script>
+									<%}%>
+								</form>
+
+                                </div>
+								<div class="modal-footer"><button class="btn btn-outline-danger" data-dismiss="modal">Close</button></div>
+                            </div>
+						  </div>
+						 </div>
+
+
+            
+            <div class="modal fade" id="editParent">
+                <div class="modal-dialog modal-lg" style="height:500px;">
+                    <div class="modal-content" id="shadow">
+                        <div class="modal-header"><span style="font-size:18px;" id="headip">Add New Parent</span></div>
+                        <div class="modal-body text-center" id="overflowControl">
+                            
+                            <div class="row" >
+							
+                                <form role="form" method='POST' id="pform" >
+								  <div style="margin-left:20px; margin-right:30px;">
+                                    <input type="text" id="y1" name="parentname" style="margin-top:20px;" class="form-control" placeholder="Enter Parent Name" required>
+                                    <input type="tel" id="y2" name="mobilenumber" style="margin-top:20px"  class="form-control" placeholder="Enter Phone Number" required>
+                                    <input type="text" id="y3" name="address" style="margin-top:20px"  class="form-control" placeholder="Enter Address" required>
+  
+                                    <!--input type="text" id="y6" name="schoolname" style="margin-top:20px"  class="form-control" placeholder="Enter school name"-->
+									<select name="schoolname" id="y6" style="width:100%; margin-top:15px;" class="form-control" required>
+									  <%if(schools.length!=0){%>
+									     <option value="" selected>Choose School Here</option>
+									  <%}else{%>
+									      <option value="" selected>No school found to add parents</option>
+									  <%}%>
+									  <%schools.forEach(function(school,index){%>
+									    <option value="<%=school.name%>"><%=school.name%></option>
+									  <%})%>
+									</select>
+									<span id="tt">
+									 
+									 <input type="text" id="y51" name="childname" style="margin-top:20px; width:35%; float:left; margin-right:10px;"  class="form-control" placeholder="Enter childname" required>
+									 <input type="text" id="y71" name="busnumber" style="margin-top:20px; width:58%;" class="form-control" placeholder="Enter morning vehicle number (Keep empty if not fixed)">
+									 <i class="fas fa-plus" style=" margin-left:20px; float:right; margin-top:-30px;" id="i1" onclick="fexpand()" style="width:10%;"></i>
+									 <input type="text" id="y81" name="busnumber1" style="margin-top:20px; width:58%; float:right; margin-right:35px; margin-bottom:20px;" class="form-control" placeholder="Enter evening vehicle number (Keep empty if not fixed)"> 
+                                     
+									 
+									</span>
+									
+									
+									<input type="email" id="y4" name="email" style="margin-top:20px"  class="form-control" placeholder="Enter Email Address" required>
+                                    <!--input type="hidden" id="y7" name="busnumber" style="margin-top:20px"  style="margin-top:10px;" class="form-control" value=0-->
+                                    
+                                     <input type="hidden" name="from" value="admin"/>									
+                                    
+									
+									<button type="submit" id="addp" style="margin-top:20px"  class="btn btn-outline-primary btn-lg" style="margin-top:20px;">Submit</button>
+                                </div>
+								</form>
+							 
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button class="btn btn-outline-danger" data-dismiss="modal">Close</button></div>
+                    </div>
+                </div>
+            </div>
+            
+			
+			<div class="modal fade" id="confirm">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="shadow">
+					    <div class="modal-header"><span style="font-size:18px; margin:auto;">Confirmation Alert</span></div>
+                        <div class="modal-body text-center">
+                            <p>Are you sure you want to delete the data?</p>
+                        </div>
+                        <div class="modal-footer">
+						  <button class="btn btn-outline-info" id="yescon">Yes</button>
+						  <button class="btn btn-outline-danger" data-dismiss="modal">No</button>
+						</div>
+                    </div>
+                </div>
+            </div>
+			
+			
+			<div class="modal fade" id="edituserdata">
+                <div class="modal-dialog modal-lg" style="height:450px;" id="f13">
+                    <div class="modal-content" id="shadow">
+                        <div class="modal-header"><span style="font-size:18px;" id="headis">Edit Login Credentials</span></div>
+                        <div class="modal-body text-center" id="overflowControl">
+                            <div class="row" id="editcred">
+                                <form role="form text-center" method='POST' action="/adminit" id="credform">
+                                    <input type="text" id="credname" name="username" style="margin-top:20px; margin-left:10px; width:95%" class="form-control" placeholder="Enter New Username" required>
+									<input type="password" id="credpass" name="password" style="margin-top:20px; margin-left:10px; width:95%" class="form-control" placeholder="Enter New Password" required>
+                                    <button type="submit" style="margin-top:10px; float:right; margin-right:20px;" class="btn btn-outline-info">Submit</button>
+								</form>
+                            </div>
+                        </div>
+                        <div class="modal-footer"><button class="btn btn-outline-danger" data-dismiss="modal">Close</button></div>
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+		
+		
+		<div class="modal fade" id="errorma">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="shadow">
+					    <div class="modal-header"><span style="font-size:18px; margin:auto;">Error importing data</span></div>
+                        <div class="modal-body text-center">
+                            <p id="mmc"></p>
+                        </div>
+                        <div class="modal-footer">
+						  <button class="btn btn-outline-danger" data-dismiss="modal">OK</button>
+						</div>
+                    </div>
+                </div>
+            </div>
+
+			<div class="modal fade" id="errormd">
+                <div class="modal-dialog">
+                    <div class="modal-content" id="shadow">
+					    <div class="modal-header"><span style="font-size:18px; margin:auto;">Error deleting device</span></div>
+                        <div class="modal-body text-center">
+                            <p id="mmp"></p>
+                        </div>
+                        <div class="modal-footer">
+						  <button class="btn btn-outline-danger" data-dismiss="modal">OK</button>
+						</div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+    
+	
+	
+	<script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <script src="vendor/slick/slick.min.js"></script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js"></script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+
+  
+    <script src="js/main.js"></script>
+	<script src="js/bootstable.min.js"></script>
+	<script src="js/socket.js"></script>
+    <script>
+        function addSchool() {
+            document.getElementById('addSchool').style.display = "inline-block";
+			document.getElementById('addSchool').style.height="450px";
+            document.getElementById('removeSchool').style.display = "none";
+            document.getElementById('modifySchool').style.display = "none";
+            document.getElementsByTagName('form').style.width = "100%";
+        }
+
+        function removeSchool() {
+            document.getElementById('addSchool').style.display = "none";
+            document.getElementById('removeSchool').style.display = "inline-block";
+            document.getElementById('modifySchool').style.display = "none";
+        }
+
+        function modifySchool() {
+            document.getElementById('addSchool').style.display = "none";
+            document.getElementById('removeSchool').style.display = "none";
+            document.getElementById('modifySchool').style.display = "inline-block";
+        }
+
+        function addParent() {
+            document.getElementById('addParent').style.display = "inline-block";
+			document.getElementById('addParent').style.height="500px";
+            document.getElementById('removeParent').style.display = "none";
+            document.getElementById('modifyParent').style.display = "none";
+            document.getElementsByTagName('form').style.width = "100%";
+        }
+
+        function removeParent() {
+            document.getElementById('addParent').style.display = "none";
+            document.getElementById('removeParent').style.display = "inline-block";
+            document.getElementById('modifyParent').style.display = "none";
+        }
+
+        function modifyParent() {
+            document.getElementById('addParent').style.display = "none";
+            document.getElementById('removeParent').style.display = "none";
+            document.getElementById('modifyParent').style.display = "inline-block";
+        }
+
+    </script>
+ 
+</body>
+
+</html>
