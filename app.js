@@ -247,10 +247,6 @@ app.post('/adminsignup',(req,res)=>{
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
 app.get('/logout',(req,res)=>{
   req.session.admin="";
   res.redirect('/');
@@ -609,14 +605,11 @@ app.post('/signup',(req,res)=>{  //app signup
 	}  
   });
  }
-<<<<<<< HEAD
  
  app.post('/generate',(req,res)=>{
     route.route(req,res);
  });
-=======
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
-   
+
    app.post('/getstuds',(req,res)=>{  //get all students data and deviceIds
       //db.getstuds(req.body["num"],res);
       //req.body.num //req.body.time
