@@ -100,11 +100,8 @@ let first,act,coords,unm,ids,pids,lats,longs,myLatLng,maps,marker,trafficLayer,b
 	$.ajax({
        url:"http://35.200.152.63/api/devices",
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
 	   crossDomain: true,
@@ -124,11 +121,8 @@ let first,act,coords,unm,ids,pids,lats,longs,myLatLng,maps,marker,trafficLayer,b
           $.ajax({
             url:"http://35.200.152.63/api/positions",
 	        headers: {
-<<<<<<< HEAD
              "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-             "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 			 "Accept":"application/json"
             },
 			crossDomain: true,
@@ -194,11 +188,8 @@ function seereport(){
        url:data,
 	   crossDomain: true, 
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
        type:"GET",
@@ -315,11 +306,8 @@ function downloadreport(){
        url:data,
 	   crossDomain: true,
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
        type:"GET",
@@ -380,11 +368,8 @@ function comagain(){
   $.ajax({
       url:"http://35.200.152.63/api/devices",
 	   headers:{
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
 	   crossDomain: true,
@@ -418,11 +403,8 @@ function mapagain(){
        url:"http://35.200.152.63/api/positions",
 	   crossDomain: true,
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
        type:"GET",
@@ -717,11 +699,9 @@ function deletedata(name,uname){
        url:"http://35.200.152.63/api/users",
 	   crossDomain: true,
 	   headers: {
-<<<<<<< HEAD
+
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
           "Accept":"application/json"
 	   },
        type:"GET",
@@ -747,11 +727,9 @@ function finallydo(index,name){
                   url:"http://35.200.152.63/api/users/"+index,
 	              crossDomain: true,
 	              headers: {
-<<<<<<< HEAD
+
                     "Authorization": "Basic " + btoa("admin:Girlneeds@")
-=======
-                    "Authorization": "Basic " + btoa("admin:admin")
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
                   },
                  type:"DELETE",
 	             xhrFields: {
@@ -819,11 +797,8 @@ function waitplz(){
               url:"http://35.200.152.63/api/users",
 	          crossDomain: true,
 	          headers: {
-<<<<<<< HEAD
                "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-               "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 			   "Content-Type":"application/json"
               },
               type:"POST",
@@ -848,11 +823,8 @@ function waitplz1(data,uname){
 	   url:"http://35.200.152.63/api/users",
 	   crossDomain: true,
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
        type:"GET",
@@ -881,11 +853,8 @@ function waitplz2(index,data){
 	   url:"http://35.200.152.63/api/users/"+index,
 	   crossDomain: true,
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Content-Type":"application/json"
        },
        type:"PUT",
@@ -1016,11 +985,8 @@ function deletedevice(busno,school,device){
 	   url:"http://35.200.152.63/api/devices/",
 	   crossDomain: true,
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
        type:"GET",
@@ -1040,11 +1006,7 @@ function deletedevice(busno,school,device){
 	            url:"http://35.200.152.63/api/devices/"+index,
 	            crossDomain: true,
 	            headers: {
-<<<<<<< HEAD
                   "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-                  "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
 				  "Content-Type":"application/json"
                  },
                 type:"DELETE",
@@ -1379,11 +1341,8 @@ function addn1(){
 	   crossDomain: true,
        type:"POST",
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Content-Type":"application/json"
        },
 	   data:JSON.stringify(data),

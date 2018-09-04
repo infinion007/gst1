@@ -67,11 +67,8 @@ let time,inter,mj,marker1,flightPath,flightPath1,mlat,mlng,maps1,mlatln,mlatln1,
        url:"http://35.200.152.63/api/positions",
 	   crossDomain: true,
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
        type:"GET",
@@ -90,11 +87,8 @@ let time,inter,mj,marker1,flightPath,flightPath1,mlat,mlng,maps1,mlatln,mlatln1,
              url:"http://35.200.152.63/api/devices",
 	         crossDomain: true,
 	         headers: {
-<<<<<<< HEAD
                "Authorization": "Basic " + btoa("admin:Girlneeds@")
-=======
-               "Authorization": "Basic " + btoa("admin:admin")
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
              },
              type:"GET",
 	         xhrFields: {
@@ -148,11 +142,8 @@ let time,inter,mj,marker1,flightPath,flightPath1,mlat,mlng,maps1,mlatln,mlatln1,
 	$.ajax({
        url:"http://35.200.152.63/api/positions",
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
 	   crossDomain: true,
@@ -209,11 +200,8 @@ function seeplayback(){
        url:data,
 	   crossDomain: true,
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
        type:"GET",
@@ -225,12 +213,8 @@ function seeplayback(){
 		  $("#myRange").val(1);
 		  if(res.length==0){
 		   $("#addy1").css("height","500px");
-<<<<<<< HEAD
-		   $("#erru11").css("display","none");
-		   $("#erru12").css("display","block");
-=======
+
 		   $("#erru11").css("display","block");
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
 		  }else{
 		   mlat=0;
 		   mlng=0;
@@ -257,10 +241,7 @@ function seeplayback(){
 		  $("#cover").hide();
 		  $("#addy1").css("height","500px");
 		  $("#erru11").css("display","block");
-<<<<<<< HEAD
-		  $("#erru12").css("display","none");
-=======
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 	   }
   });
 }
@@ -279,11 +260,8 @@ function redoit(){
 	flightPath1=null;
  }
  maps1 = new google.maps.Map(document.getElementById('map_canvas'), {
-<<<<<<< HEAD
-             zoom: 14,
-=======
+
              zoom: 15,
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
              zoomControlOptions: {
                position: google.maps.ControlPosition.LEFT_CENTER
               },
@@ -312,14 +290,11 @@ document.getElementById('myRange').addEventListener('mousemove', function(e) {
 });
 
 function hover(e){
-<<<<<<< HEAD
-  let m=Math.floor(( e.clientX- e.target.clientWidth) / (18-3))-1;
-=======
+
   let m=Math.floor(( e.clientX- e.target.clientWidth) / (parseInt(e.target.getAttribute('max'),10)+3));
   if(m==0){
     m=1;
   }
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
   $("#myRange").attr("title",m+"X");
 }
 
@@ -408,11 +383,8 @@ function downloadreport(){
        url:data,
 	   crossDomain: true,
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
        type:"GET",
@@ -495,11 +467,8 @@ function seereport(){
        url:data,
 	   crossDomain: true, 
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
        type:"GET",
@@ -608,11 +577,8 @@ function waitmeplz(){
 	   url:"http://35.200.152.63/api/users",
 	   crossDomain: true,
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
        type:"GET",
@@ -642,11 +608,8 @@ function waitplz1(index,data){
 	   url:"http://35.200.152.63/api/users/"+index,
 	   crossDomain: true,
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Content-Type":"application/json"
        },
        type:"PUT",
@@ -696,11 +659,8 @@ function mapagain(){
 	$.ajax({
        url:"http://35.200.152.63/api/positions",
 	   headers: {
-<<<<<<< HEAD
           "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-          "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		  "Accept":"application/json"
        },
 	   crossDomain: true,
@@ -737,11 +697,8 @@ function mapfinal(){
 	$.ajax({
               url:"http://35.200.152.63/api/devices",
 	          headers: {
-<<<<<<< HEAD
                "Authorization": "Basic " + btoa("admin:Girlneeds@"),
-=======
-               "Authorization": "Basic " + btoa("admin:admin"),
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 			   "Accept":"application/json"
               },
 	          crossDomain: true,
