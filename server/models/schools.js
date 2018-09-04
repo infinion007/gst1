@@ -372,11 +372,8 @@ schoolSchema.statics.getstuds=function(parentnum,time,res){
 	  let students=new Array();
 	  let devices=new Array();
 	  let buses=new Array();
-<<<<<<< HEAD
 	  let a,name,address,scaddress,paid,email;
-=======
-	  let a,name,address,scaddress,paid;
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 	  this.findOne({"parents.mobileNumber":parentnum},(err,result)=>{
 		scaddress=result.address;
 		for(let i=0;i<result.parents.length;i++){
@@ -388,10 +385,7 @@ schoolSchema.statics.getstuds=function(parentnum,time,res){
 		 name=a.parentName;
 		 address=a.address;
 		 paid=a.paid;
-<<<<<<< HEAD
 		 email=a.emailAddress;
-=======
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
 		 if(a.children.length==0){
 		    res.send(JSON.stringify({status:"empty",name:result.parentName}));
 		 }else{
@@ -421,11 +415,7 @@ schoolSchema.statics.getstuds=function(parentnum,time,res){
 			 
 			 
 			 }
-<<<<<<< HEAD
 			res.send(JSON.stringify({status:"nempty",students:students,name:name,deviceid:devices,address:address,scaddress:scaddress,paid:paid,email:email}));
-=======
-			res.send(JSON.stringify({status:"nempty",students:students,name:name,deviceid:devices,address:address,scaddress:scaddress,paid:paid}));
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
 		 }
 	  });
 }
