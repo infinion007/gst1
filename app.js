@@ -6,23 +6,17 @@ const express=                require('express'),
       localStrategy=          require('passport-local'),
       mongoose=               require('./server/db/mongoose.js'),
       user=                   require('./server/models/user.js'),
-<<<<<<< HEAD
 	  route=require('./router.js'),
-=======
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 	  misc=require('./misc.js');
       _=require('lodash'),
       axios=require('axios'),
 	  bcrypt=require('bcryptjs'),
 	  qs = require('querystring');		
-<<<<<<< HEAD
 
-const enAddressUrl='http://admin:Girlneeds@@35.200.152.63/api/devices/';
-
-=======
 //const enAddressUrl='http://admin:admin@35.200.152.63/api/positions';
 const enAddressUrl='http://admin:admin@35.200.152.63/api/devices/';
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 
 let session = require('express-session');
 let MongoStore = require('connect-mongo')(session);
@@ -111,11 +105,8 @@ function devicestates(req,res,next){
   let result1=[];
   let livedevices=[];
   school.find({service:"GST"}).then((docs)=>{
-<<<<<<< HEAD
     axios.get("http://admin:Girlneeds@@35.200.152.63/api/devices/").then((r1)=>{
-=======
-    axios.get("http://admin:admin@35.200.152.63/api/devices/").then((r1)=>{
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 	_.forEach(docs,function(school){
       _.forEach(school.buses,function(bus){
 	    _.forEach(r1.data,(val)=>{
@@ -455,11 +446,8 @@ app.post('/signup',(req,res)=>{  //app signup
 			    method: 'POST',
                 headers: { 'content-type': 'application/json' },
 				data:JSON.stringify(post),
-<<<<<<< HEAD
 				url:"http://admin:Girlneeds@@35.200.152.63/api/users"
-=======
-				url:"http://admin:admin@35.200.152.63/api/users"
->>>>>>> f5645ad785ec1202d747e6e0a5722411e51568d0
+
 		   }).then((result)=>{
 		      
 			  let body=_.pick(req.body,['name','username','address','password','number','email']);
