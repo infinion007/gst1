@@ -11,8 +11,8 @@ const express=                require('express'),
       axios=require('axios'),
 	  bcrypt=require('bcryptjs'),
 	  qs = require('querystring');		
-//const enAddressUrl='http://admin:Girlneeds@@35.200.152.63/api/positions';
-const enAddressUrl='http://admin:Girlneeds@@35.200.152.63/api/devices/';
+//const enAddressUrl='http://admin:Girlneeds789@@35.200.152.63/api/positions';
+const enAddressUrl='http://admin:Girlneeds789@@35.200.152.63/api/devices/';
 
 let session = require('express-session');
 let MongoStore = require('connect-mongo')(session);
@@ -101,7 +101,7 @@ function devicestates(req,res,next){
   let result1=[];
   let livedevices=[];
   school.find({service:"GST"}).then((docs)=>{
-    axios.get("http://admin:Girlneeds@@35.200.152.63/api/devices/").then((r1)=>{
+    axios.get("http://admin:Girlneeds789@@35.200.152.63/api/devices/").then((r1)=>{
 	_.forEach(docs,function(school){
       _.forEach(school.buses,function(bus){
 	    _.forEach(r1.data,(val)=>{
@@ -437,7 +437,7 @@ app.post('/signup',(req,res)=>{  //app signup
 			    method: 'POST',
                 headers: { 'content-type': 'application/json' },
 				data:JSON.stringify(post),
-				url:"http://admin:Girlneeds@@35.200.152.63/api/users"
+				url:"http://admin:Girlneeds789@@35.200.152.63/api/users"
 		   }).then((result)=>{
 		      
 			  let body=_.pick(req.body,['name','username','address','password','number','email']);
